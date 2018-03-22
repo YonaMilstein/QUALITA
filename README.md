@@ -6,8 +6,7 @@ Jewish immigrants choose to come to Israel out of personal choice and understand
 It is our collective duty as a Jewish state to do whatever it takes to help accommodate those immigrants here in Israel.
 <br></br>
 
-## Please visit our [application](http://mashav-r.co.il/wp-content/uploads/2016/11/Website_Building.jpg)
-
+## Please visit our [live application](http://mashav-r.co.il/wp-content/uploads/2016/11/Website_Building.jpg)
 <br></br>
 
 
@@ -35,10 +34,8 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Documnetation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](http://inch-ci.org/github/jce-il/project-template) |
 | Project Course Status | ... |
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
-- Alright, currently only a landing page...
 
-Please visit our wiki for furthur project info: 
+## Helpful links:
 
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
@@ -49,6 +46,8 @@ Please visit our wiki for furthur project info:
 - [Project Inception](../../wiki/inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
+
+Please visit our wiki for furthur project info: 
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
