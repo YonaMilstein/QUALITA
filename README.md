@@ -7,8 +7,6 @@ It is our collective duty as a Jewish state to do whatever it takes to help acco
 <br></br>
 
 ## Please visit our [live application](http://mashav-r.co.il/wp-content/uploads/2016/11/Website_Building.jpg)
-<br></br>
-
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
