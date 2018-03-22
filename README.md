@@ -1,6 +1,8 @@
 <h1 align="center">QUALITA</h1>
 
 ## Our vision
+
+[![Join the chat at https://gitter.im/QUALITA-gitter/Lobby](https://badges.gitter.im/QUALITA-gitter/Lobby.svg)](https://gitter.im/QUALITA-gitter/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <img align="right" src="http://qualita.org.il/wp-content/uploads/2017/01/Home-page-Qualita_02.jpg"/>
 Jewish immigrants choose to come to Israel out of personal choice and understanding that this is an important and crucial decision that will affect their future and the future of their families. 
 It is our collective duty as a Jewish state to do whatever it takes to help accommodate those immigrants here in Israel.
