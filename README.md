@@ -38,7 +38,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
-### [Team Page](../../wiki/team)
+### [Team Page](https://github.com/YonaMilstein/QUALITA/wiki/The-team)
 
 ### Project Documents
 - [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
