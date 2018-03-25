@@ -15,7 +15,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 
 |Category|Status|
 |---|---|
-| Version Control System| git & github |
+| Version Control System|[Git](https://git-scm.com/) & [GitHub](https://github.com/)|
 | Recommended IDE | [VSCode](https://code.visualstudio.com) |
 | Group Chat | [![Join the chat at https://gitter.im/jce-il/project-template](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/QUALITA-gitter/Lobby) |
 | Build Status (CI) |  [![Build Status](https://travis-ci.org/jce-il/project-template.svg?branch=master)](https://travis-ci.org/jce-il/project-template) |
