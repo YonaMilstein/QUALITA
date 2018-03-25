@@ -30,7 +30,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/jce-il/project-template/graphs/contributors)|
 | Deployment | [![Heroku](http://heroku-badge.herokuapp.com/?app=my-app&style=flat&svg=1&root=index.html)]() |
 | Security | [![Known Vulnerabilities](https://snyk.io/test/github/jce-il/project-template/badge.svg)](https://snyk.io/test/github/jce-il/project-template) |
-| Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](http://inch-ci.org/github/jce-il/project-template) |
+| Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/YonaMilstein/QUALITA/wiki) |
 | Project Course Status | ... |
 
 
@@ -41,7 +41,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 ### [Team Page](https://github.com/YonaMilstein/QUALITA/wiki/The-team)
 
 ### Project Documents
-- [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
+- [Project Idea](https://github.com/YonaMilstein/QUALITA/wiki/Inception)
 - [Project Inception](../../wiki/inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
