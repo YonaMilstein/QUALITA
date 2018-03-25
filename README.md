@@ -36,7 +36,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 
 ## Helpful links:
 
-### [User Manual](../../wiki/user-manual) (empty for now)
+### [User Manual](https://github.com/YonaMilstein/QUALITA/wiki/User-manual)
 
 ### [Team Page](https://github.com/YonaMilstein/QUALITA/wiki/The-team)
 
