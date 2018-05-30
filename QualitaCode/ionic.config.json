@@ -1,0 +1,8 @@
+{
+  "name": "Qualita2",
+  "app_id": "aef5de82",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
