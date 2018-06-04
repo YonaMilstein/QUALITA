@@ -1,6 +1,37 @@
 page-direct {
+
+    .aaa {
+        background: darkorchid;
+    }
+
     .Button {
-         background: #f53d3d;
+         background: "primary";
+         display: flex;
+
+        // justify-content: center;
+        //  align-items: center;
+         
+         
+    }
+
+    
+    .TwoButtons {
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        padding-top: 60%;
+        
+    }
+
+    .getstart {
+
+        background-image: url('../assets/imgs/logoDirect.png');
+        // background: url('../assets/imgs/logoDirect.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-size: auto;
+        background-position: center top;
+        // background-attachment: fixed; 
     }
 }
 
