@@ -17,11 +17,13 @@ import { YtProvider } from '../providers/yt/yt';
 import { PlaylistPage } from '../pages/playlist/playlist';
 import { VodVideoPage } from '../pages/vod-video/vod-video';
 import { DirectVideoPage } from '../pages/direct-video/direct-video';
+import { VideoPage } from '../pages/video/video';
 
 @NgModule({
   declarations: [
     MyApp,
     PlaylistPage,
+    VideoPage,
     VodVideoPage,
     DirectPage,
     SearchPage,
@@ -40,6 +42,7 @@ import { DirectVideoPage } from '../pages/direct-video/direct-video';
   entryComponents: [
     MyApp,
     PlaylistPage,
+    VideoPage,
     VodVideoPage,
     DirectPage,
     SearchPage,

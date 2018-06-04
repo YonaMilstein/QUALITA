@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { VideoPage } from '../video/video';
  
 
 @Component({
@@ -21,13 +22,18 @@ export class PlaylistPage {
     })
    
   }
- 
+ myVid="";
   openVideo(video) {
-    // window.open('https://www.youtube.com/watch?v=R2F_hGwD26g&list=RDR2F_hGwD26g&start_radio=1');
-    if (this.plt.is('cordova')) {
-      this.youtube.openVideo(video.snippet.resourceId.videoId);
-    } else {
-      window.open('https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId);
-    }
+ 
+    // if (this.plt.is('cordova')) {
+    //   this.youtube.openVideo(video.snippet.resourceId.videoId);
+    // } else {
+    //   window.open('https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId);
+    // }
+
+    this.myVid='https://www.youtube.com/embed/'+video.snippet.resourceId.videoId;
+    console.log('video data: ', this.myVid); //test
+    this.navCtrl.push(VideoPage, {myVid: this.myVid});
+
   }
 }
