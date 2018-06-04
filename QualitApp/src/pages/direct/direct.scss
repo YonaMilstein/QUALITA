@@ -7,6 +7,7 @@ page-direct {
     .Button {
          background: "primary";
          display: flex;
+         width: 200px;
 
         // justify-content: center;
         //  align-items: center;
@@ -18,21 +19,25 @@ page-direct {
     .TwoButtons {
         text-align: center;
         margin: auto;
-        width: 50%;
-        padding-top: 60%;
+        width: 60%;
+        padding-top: 70%;
         
+    }
+    #logo{
+        background-image: url('../assets/imgs/Logo-Studio-Qualita.png');
+        background-position: center top;        
     }
 
     .getstart {
-
-        background-image: url('../assets/imgs/logoDirect.png');
-        // background: url('../assets/imgs/logoDirect.png');
+        //background-image: url('../assets/imgs/Logo-Studio-Qualita.png');
+        background-image: url('../assets/imgs/750x1334-Background.png');
+        //background: url('../assets/imgs/logoDirect.png');
         background-repeat: no-repeat;
         background-size:cover;
-        background-size: auto;
-        background-position: center top;
+        //background-size: auto;
+        //background-position: center top;
         // background-attachment: fixed; 
     }
 }
-
+ 
 

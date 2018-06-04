@@ -38,28 +38,32 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  toolbar:     #488aff,
+  insideSearch:#ecf0f1
 );
 // primary:    #488aff,
-// secondary:  #32db64,
+// secondary:  #32db64, 
 // danger:     #f53d3d,
 // light:      #f4f4f4,
 // dark:       #222
 
 
+$tabs-background: color($colors, insideSearch);
+//$tabs-background: #488aff;
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$searchbar-ios-input-background-color: color($colors, insideSearch);
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
-
+$searchbar-md-input-background-color: color($colors, insideSearch);
 
 // App Windows Variables
 // --------------------------------------------------
