@@ -18,7 +18,7 @@ export class DirectVideoPage {
   vid= "https://www.youtube.com/embed/L7S_a0EbODU";
   constructor(public navCtrl: NavController, public navParams: NavParams, private dom: DomSanitizer) {
   }
-
+  
   sanitize(vid){
     return this.dom.bypassSecurityTrustResourceUrl(vid);
   }
