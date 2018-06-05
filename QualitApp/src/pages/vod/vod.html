@@ -6,23 +6,26 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
+  <!-- <ion-navbar color="primary">
     <ion-title>vod</ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
 
 </ion-header>
 
 
-<ion-content padding>
-    <button ion-button icon-left (click)="openVodVideo()">
-       <ion-icon name="videocam"></ion-icon>
-        Video
-    </button>
+<ion-content padding class="getstart">
+    <div class="TwoButtons">
+        <button class="Button" ion-button round icon-left (click)="openVodVideo()">
+          <ion-icon name="videocam"></ion-icon>
+            Vod
+        </button>
+
+        <div class="divider"></div>
 
 
-  <button ion-button icon-left>
-     <ion-icon name="musical-notes"></ion-icon>
-     Audio
-  </button>
-
+        <button class="Button" ion-button round icon-left>
+          <ion-icon name="musical-notes"></ion-icon>
+            Audio
+        </button>
+    </div>      
 </ion-content>
