@@ -14,5 +14,5 @@
 
 
 <ion-content padding>
-  <iframe [src]="sanitize(x)" frameborder="0" alowfullscreen></iframe>
+  <iframe [src]='x | safe' frameborder="0" allowfullscreen></iframe>
 </ion-content>
