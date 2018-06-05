@@ -14,8 +14,7 @@ import {DomSanitizer}  from '@angular/platform-browser';
   templateUrl: 'direct-video.html',
 })
 export class DirectVideoPage {
-  //vid= "https://www.youtube.com/embed/LPN92rsPK_A";
-  vid= "https://www.youtube.com/embed/L7S_a0EbODU";
+  vid= "https://www.youtube.com/embed/live_stream?channel=UC4ZNntU3CyEIH8RGH0n_5bw";
   constructor(public navCtrl: NavController, public navParams: NavParams, private dom: DomSanitizer) {
   }
   
