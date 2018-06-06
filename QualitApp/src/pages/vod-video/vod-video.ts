@@ -4,21 +4,17 @@ import { Component } from '@angular/core';
 import { NavController, AlertController} from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 
-/**
- * Generated class for the VodVideoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-//@IonicPage()
+
 @Component({
   selector: 'page-vod-video',
   templateUrl: 'vod-video.html',
 })
+
 export class VodVideoPage {
-     channelId = 'UC4ZNntU3CyEIH8RGH0n_5bw'; // Devdactic Channel ID
+     channelId = 'UC4ZNntU3CyEIH8RGH0n_5bw';
      playlists: Observable<any[]>;
+
      constructor(public navCtrl: NavController, private ytProvider: YtProvider, private alertCtrl: AlertController) { }
  
      searchPlaylists() {
@@ -37,6 +33,6 @@ export class VodVideoPage {
     
      openPlaylist(id) {
        this.navCtrl.push(PlaylistPage, {id: id});
-       
      }
+
    }

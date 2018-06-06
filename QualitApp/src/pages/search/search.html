@@ -11,11 +11,22 @@
   </ion-navbar>
 
   <ion-toolbar>
-      <ion-searchbar></ion-searchbar>
+      <ion-searchbar [(ngModel)]="inputName"></ion-searchbar>
   </ion-toolbar>
-
 </ion-header>
 
-<ion-content padding>
+
+ <ion-content>
+  <button full ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
+
+  <ion-list>
+    <button ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
+    <ion-thumbnail item-start>
+      <img [src]="video?.snippet?.thumbnails?.default?.url">
+    </ion-thumbnail>
+    <h2>{{ video.snippet.title }}</h2> 
+    <p>{{ video.snippet.description }}</p>
+    </button>
+  </ion-list>
 
 </ion-content>

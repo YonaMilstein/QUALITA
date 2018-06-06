@@ -1,25 +1,34 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, AlertController, Platform, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
+import { YtProvider } from './../../providers/yt/yt';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { VideoPage } from '../video/video';
 
-/**
- * Generated class for the SearchPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-//@IonicPage()
 @Component({
   selector: 'page-search',
   templateUrl: 'search.html',
 })
 export class SearchPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  channelId = 'UC4ZNntU3CyEIH8RGH0n_5bw';
+  videosResults: Observable<any[]>;
+  
+  constructor(public navCtrl: NavController, private plt: Platform, private youtube: YoutubeVideoPlayer, public navParams: NavParams, private ytProvider: YtProvider) { }
+
+  myVid="";
+  openVideo(video) {
+    this.myVid='https://www.youtube.com/embed/'+video.id.videoId;
+    console.log('video data: ', this.myVid); //test
+    this.navCtrl.push(VideoPage, {myVid: this.myVid});
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SearchPage');
-  }
-
+   searchVideos(inputName) {
+    let listId = this.navParams.get('id');
+    this.videosResults = this.ytProvider.getVideoFromChannel(this.channelId, inputName);
+    this.videosResults.subscribe(data=> {
+      console.log('video data: ', data);
+    })
+   }
 }
