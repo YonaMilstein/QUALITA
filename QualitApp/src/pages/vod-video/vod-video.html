@@ -7,11 +7,11 @@
   </ion-header>
    
   <ion-content>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label stacked>Channel ID</ion-label>
       <ion-input type="text" [(ngModel)]="channelId"></ion-input>
-    </ion-item>
-    <button full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search Playlists</button>
+    </ion-item> -->
+    <!-- <button full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search Playlists</button> -->
    
     <ion-list no-padding>
       <button ion-item *ngFor="let list of playlists | async" (click)="openPlaylist(list.id)">
