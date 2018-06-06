@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import {SafePipe} from '../../app/pipes/safe';
 
 
 /**
@@ -13,6 +14,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'page-video',
   templateUrl: 'video.html',
+ 
 })
 export class VideoPage {
  // vid="https://www.youtube.com/embed/L7S_a0EbODU";//test

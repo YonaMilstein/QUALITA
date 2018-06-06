@@ -18,6 +18,7 @@ import { PlaylistPage } from '../pages/playlist/playlist';
 import { VodVideoPage } from '../pages/vod-video/vod-video';
 import { DirectVideoPage } from '../pages/direct-video/direct-video';
 import { VideoPage } from '../pages/video/video';
+import { SafePipe } from './pipes/safe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VideoPage } from '../pages/video/video';
     VodPage,
     ParticipatePage,
     DirectVideoPage,
-    TabsPage
+    TabsPage,
+    SafePipe
   ],
   imports: [
     BrowserModule,
