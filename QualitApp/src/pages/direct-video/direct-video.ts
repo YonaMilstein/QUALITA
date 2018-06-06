@@ -25,5 +25,8 @@ export class DirectVideoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DirectVideoPage');
   }
+  ionViewWillLeave(){
+    this.navCtrl.popToRoot();
+  }
 
 }

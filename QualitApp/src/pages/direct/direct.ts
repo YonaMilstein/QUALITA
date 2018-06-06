@@ -18,6 +18,7 @@ export class DirectPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DirectPage');
   }
-
-
+  // ionViewDidEnter(){
+  //   this.navCtrl.setRoot(DirectVideoPage);
+  // }
 }

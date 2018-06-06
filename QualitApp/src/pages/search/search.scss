@@ -1,18 +1,28 @@
-ion-card{
-    position: relative;
-    text-align: center;
-}
+page-search{
 
-ion-content{
-    height: 100%;
-}
+    ion-card{
+        position: relative;
+        text-align: center;
+    }
 
-.title{
-    position: absolute;
-    top: 36%;
-    font-size: 1.4em;
-    width: 100%;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
+    ion-content{
+         height: 100%;
+    }
+
+    .title{
+        position: absolute;
+        top: 36%;
+        font-size: 1.4em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
+     }   
+    
+    .getstart {
+        background-image: url('../assets/imgs/background.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center top;
+    }
 }
