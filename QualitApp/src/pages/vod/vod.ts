@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VodVideoPage } from '../vod-video/vod-video';
-
+import { VodAudioPage } from '../vod-audio/vod-audio';
 /**
  * Generated class for the VodPage page.
  *
@@ -21,6 +21,9 @@ export class VodPage {
   openVodVideo() {
     this.navCtrl.push(VodVideoPage);
     
+  }
+  openVodAudio(){
+    this.navCtrl.push(VodAudioPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad VodPage');
