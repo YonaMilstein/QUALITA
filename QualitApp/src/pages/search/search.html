@@ -5,20 +5,13 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar color="primary">
-    <ion-title>search</ion-title>
-  </ion-navbar>
-
   <ion-toolbar>
-      <ion-searchbar [(ngModel)]="inputName"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="inputName" showCancelButton="true" animated ="true" placeholder="Rechercher une vidéo"></ion-searchbar>
   </ion-toolbar>
+  <button round ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
 </ion-header>
 
-
  <ion-content>
-  <button full ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
-
   <ion-list>
     <button ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
     <ion-thumbnail item-start>
@@ -28,5 +21,6 @@
     <p>{{ video.snippet.description }}</p>
     </button>
   </ion-list>
-
 </ion-content>
+
+
