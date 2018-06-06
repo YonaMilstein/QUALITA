@@ -16,7 +16,12 @@ export class SearchPage {
   videosResults: Observable<any[]>;
   
   constructor(public navCtrl: NavController, private plt: Platform, private youtube: YoutubeVideoPlayer, public navParams: NavParams, private ytProvider: YtProvider) { }
-
+  
+  hide:boolean = true;
+  hideMe() {
+    this.hide = !this.hide;
+  }
+  
   myVid="";
   openVideo(video) {
     this.myVid='https://www.youtube.com/embed/'+video.id.videoId;
@@ -24,7 +29,11 @@ export class SearchPage {
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
   }
 
-   searchVideos(inputName) {
+  reload(){
+    this.navCtrl.setRoot(SearchPage);
+  }
+
+  searchVideos(inputName) {
     let listId = this.navParams.get('id');
     this.videosResults = this.ytProvider.getVideoFromChannel(this.channelId, inputName);
     this.videosResults.subscribe(data=> {

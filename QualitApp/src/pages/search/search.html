@@ -18,6 +18,7 @@
 
  <ion-content>
   <button full ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
+  <button full ion-button (click)="reload()" [disabled]="channelId === ''" color="danger">Recherche par thème</button>
 
   <ion-list>
     <button ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
