@@ -10,14 +10,14 @@ export class YtProvider {
   constructor(public http: Http) { }
  
   getPlaylistsForChannel(channel) {
-    return this.http.get('https://www.googleapis.com/youtube/v3/playlists?key=' + this.apiKey + '&channelId=' + channel + '&part=snippet,id&maxResults=20')
+    return this.http.get('https://www.googleapis.com/youtube/v3/playlists?key=' + this.apiKey + '&channelId=' + channel + '&part=snippet,id&maxResults=50')
     .map((res) => {
       return res.json()['items'];
     })
   }
  
   getListVideos(listId) {
-    return this.http.get('https://www.googleapis.com/youtube/v3/playlistItems?key=' + this.apiKey + '&playlistId=' + listId +'&part=snippet,id&maxResults=20')
+    return this.http.get('https://www.googleapis.com/youtube/v3/playlistItems?key=' + this.apiKey + '&playlistId=' + listId +'&part=snippet,id&maxResults=50')
     .map((res) => {
       return res.json()['items'];
     })
