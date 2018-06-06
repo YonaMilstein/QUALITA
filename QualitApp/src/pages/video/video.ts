@@ -38,4 +38,7 @@ export class VideoPage {
     console.log('ionViewDidLoad VideoPage');
   }
 
+  ionViewWillLeave(){
+    this.navCtrl.popToRoot();
+  }
 }
