@@ -36,7 +36,4 @@ export class PlaylistPage {
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
 
   }
-  ionViewWillLeave(){
-    this.navCtrl.popToRoot();
-  }
 } 
