@@ -1,5 +1,33 @@
 page-search{
 
+    .results{
+        background-color: transparent;
+    }
+
+    .card-background-page{
+        background-color: transparent;
+    }
+
+    #buttons{
+        background: url(../../assets/imgs/background.jpg);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ion-header{
+        background-color: transparent;
+
+    }
+
+    ion-row, ion-col{
+        background-color: transparent;
+    }
+
+    ion-grid{
+        background: url("../../assets/imgs/background.jpg");
+        background-color: transparent;
+    }
+
     ion-card{
         position: relative;
         text-align: center;

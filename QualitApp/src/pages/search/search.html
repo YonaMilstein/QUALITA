@@ -6,29 +6,33 @@
 -->
 <ion-header>
   <ion-toolbar>
-      <ion-searchbar [(ngModel)]="inputName" showCancelButton="true" animated ="true" placeholder="Rechercher une vidéo"></ion-searchbar>
+      <ion-searchbar id="searchbar" [(ngModel)]="inputName" showCancelButton="true" animated ="true" placeholder="Rechercher une vidéo" required></ion-searchbar>
   </ion-toolbar>
-  <button round ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
+
+  <div id="buttons">
+  <span>
+      <button round ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
+    </span>
+    <span>
+      <button round ion-button (click)="reload()" [disabled]="channelId === ''" color="danger">Thèmes</button>
+    </span>
+  </div>
+
 </ion-header>
 
 
  <ion-content>
-  <button full ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
-  <button full ion-button (click)="reload()" [disabled]="channelId === ''" color="danger">Recherche par thème</button>
-  <button full ion-button (click)="hideMe()" [disabled]="channelId === ''" color="danger">hide</button>
-
-
    <ion-grid class="card-background-page" *ngIf="hide">
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('activites')">
             <img src="https://static.wixstatic.com/media/a9ff3b_7125cf82b18841c2961ce0a241b78826.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/a9ff3b_7125cf82b18841c2961ce0a241b78826.jpg">
             <div class="title">Activités</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('actualite')">
             <img src="https://static.wixstatic.com/media/309d105833834f94a863c3c88cb6e00e.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/309d105833834f94a863c3c88cb6e00e.jpg">
             <div class="title">Actualité</div>
           </ion-card>
@@ -39,13 +43,13 @@
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('adolescence')">
             <img src="https://static.wixstatic.com/media/a4d7754eb367f5ce5699cfaf5d2f1551.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/a4d7754eb367f5ce5699cfaf5d2f1551.jpg">
             <div class="title">Adolescence</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('agence juive')">
               <img src="https://static.wixstatic.com/media/9faaae_abca74c3f5c44d22884cae9a6ab58cb5~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_abca74c3f5c44d22884cae9a6ab58cb5~mv2.jpg">
               <div class="title">Agence juive</div>
           </ion-card>
@@ -56,13 +60,13 @@
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('agriculture')">
               <img src="https://static.wixstatic.com/media/1c325fe25b4e081d13af79d1812d2d58.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/1c325fe25b4e081d13af79d1812d2d58.jpg">
               <div class="title">Agriculture</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('alyah')">
               <img src="https://static.wixstatic.com/media/8864dcaee76d43bf818ab5974a225c37.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/8864dcaee76d43bf818ab5974a225c37.jpg">
               <div class="title">Alyah</div>
           </ion-card>
@@ -73,13 +77,13 @@
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('art')">
               <img src="https://static.wixstatic.com/media/5dac176fc1ea62e7684326b174410e23.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/5dac176fc1ea62e7684326b174410e23.jpg">
               <div class="title">Art</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('ashdod')">
               <img src="https://static.wixstatic.com/media/4a5bfc_bbd767e21add42ba90e7325ac14e6e9e~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/4a5bfc_bbd767e21add42ba90e7325ac14e6e9e~mv2.jpg">
               <div class="title">Ashdod</div>
           </ion-card>
@@ -90,13 +94,13 @@
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('associations')">
               <img src="https://static.wixstatic.com/media/ddff68ea0e714154bb127e0ae15ceea2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/ddff68ea0e714154bb127e0ae15ceea2.jpg">
               <div class="title">Associations</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('avocat')">
               <img src="https://static.wixstatic.com/media/c66a81aa06f0495b92aa544cbf8ba122.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/c66a81aa06f0495b92aa544cbf8ba122.jpg">
               <div class="title">Avocat</div>
           </ion-card>
@@ -107,13 +111,13 @@
 
       <ion-row>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('banque')">
               <img src="https://static.wixstatic.com/media/582ed97cb9b9442b86b99e1acd742ff1.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/582ed97cb9b9442b86b99e1acd742ff1.jpg">
               <div class="title">Banque</div>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
-          <ion-card (click)="hideMe()">
+          <ion-card (click)="searchAndHide('carriere')">
               <img src="https://static.wixstatic.com/media/73aaae79d2874b0f8939bc069913239e.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/73aaae79d2874b0f8939bc069913239e.jpg">
               <div class="title">Carrière</div>
           </ion-card>
@@ -124,13 +128,13 @@
 
       <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('comptabilite')">
                 <img src="https://static.wixstatic.com/media/5efd91ceb2334b4aa63e177d144f4168.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/5efd91ceb2334b4aa63e177d144f4168.jpg">
                 <div class="title">Comptabilité</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('culture')">
                 <img src="https://static.wixstatic.com/media/d8b1a6aa64c642e28d9c2b13665868be.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/d8b1a6aa64c642e28d9c2b13665868be.jpg">
                 <div class="title">Culture</div>
             </ion-card>
@@ -141,13 +145,13 @@
   
         <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('diplome')">
                 <img src="https://static.wixstatic.com/media/249d09c895074fcd9b0549f83a271fd4.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/249d09c895074fcd9b0549f83a271fd4.jpg">
                 <div class="title">Diplôme</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('droit')">
                 <img src="https://static.wixstatic.com/media/b74fb30771114e14a2094b9885bf5eba.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/b74fb30771114e14a2094b9885bf5eba.jpg">
                 <div class="title">Droit</div>
             </ion-card>
@@ -158,13 +162,13 @@
   
         <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('ecole')">
                 <img src="https://static.wixstatic.com/media/37b722c166ba81a0edfe14b41af60fbb.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/37b722c166ba81a0edfe14b41af60fbb.jpg">
                 <div class="title">Ecole</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('education')">
                 <img src="https://static.wixstatic.com/media/f3be4ff2da7642d887eb5094442c39f5.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/f3be4ff2da7642d887eb5094442c39f5.jpg">
                 <div class="title">Education</div>
             </ion-card>
@@ -175,13 +179,13 @@
   
         <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('emploi')">
                 <img src="https://static.wixstatic.com/media/dac008bdf2a84885bc32945ebc960562.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/dac008bdf2a84885bc32945ebc960562.jpg">
                 <div class="title">Emploi</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('enfants')">
                 <img src="https://static.wixstatic.com/media/c5592548d3382d904e712f41993d8674.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/c5592548d3382d904e712f41993d8674.jpg">
                 <div class="title">Enfants</div>
             </ion-card>
@@ -192,13 +196,13 @@
   
         <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('entreprenariat')">
                 <img src="https://static.wixstatic.com/media/e1a3266eb921480692fc50444bad7718.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/e1a3266eb921480692fc50444bad7718.jpg">
                 <div class="title">Entreprenariat</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('etudes')">
                 <img src="https://static.wixstatic.com/media/72620b440e684eae9376c87a8d60f050.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/72620b440e684eae9376c87a8d60f050.jpg">
                 <div class="title">Etudes</div>
             </ion-card>
@@ -209,13 +213,13 @@
   
         <ion-row>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('examen')">
                 <img src="https://static.wixstatic.com/media/881b04c633704611b14f6b6bfc232125.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/881b04c633704611b14f6b6bfc232125.jpg">
                 <div class="title">Examen</div>
             </ion-card>
           </ion-col>
           <ion-col col-md-4>
-            <ion-card (click)="hideMe()">
+            <ion-card (click)="searchAndHide('famille')">
                 <img src="https://static.wixstatic.com/media/71da661fc1a74eaa9e5fd4819b8503d4.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/71da661fc1a74eaa9e5fd4819b8503d4.jpg">
                 <div class="title">Famille</div>
             </ion-card>
@@ -226,13 +230,13 @@
 
         <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('formation')">
                   <img src="https://static.wixstatic.com/media/f7f2aa9ce2634eeb8fa9bcf6a494971d.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/f7f2aa9ce2634eeb8fa9bcf6a494971d.jpg">
                   <div class="title">Formation</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('francais')">
                   <img src="https://static.wixstatic.com/media/4a5bfc_c55bd8f8da2b43b1a0231d60c6911a2b~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/4a5bfc_c55bd8f8da2b43b1a0231d60c6911a2b~mv2.jpg">
                   <div class="title">Français</div>
               </ion-card>
@@ -243,13 +247,13 @@
     
           <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('handicapes')">
                   <img src="https://static.wixstatic.com/media/949c5aef51724256b31ea56be6b3690c.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/949c5aef51724256b31ea56be6b3690c.jpg">
                   <div class="title">Handicapés</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('hebreu')">
                   <img src="https://static.wixstatic.com/media/4a5bfc_7b06caab34aa4cfa9f527e067395fa1a~mv2.jpg/v1/fill/w_243,h_250,al_c,lg_1,q_80/4a5bfc_7b06caab34aa4cfa9f527e067395fa1a~mv2.jpg">
                   <div class="title">Hébreu</div>
               </ion-card>
@@ -260,13 +264,13 @@
     
           <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('histoire')">
                   <img src="https://static.wixstatic.com/media/9f4e35722ad067e4ff718e84648e4c1d.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9f4e35722ad067e4ff718e84648e4c1d.jpg">
                   <div class="title">Histoire</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('high-tech')">
                   <img src="https://static.wixstatic.com/media/2dec8d61a3dcbc32575da89087d5b1d3.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/2dec8d61a3dcbc32575da89087d5b1d3.jpg">
                   <div class="title">High-Tech</div>
               </ion-card>
@@ -277,13 +281,13 @@
     
           <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('immobilier')">
                   <img src="https://static.wixstatic.com/media/28b0ae19f137491787303790a4bd3284.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/28b0ae19f137491787303790a4bd3284.jpg">
                   <div class="title">Immobilier</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('jerusalem')">
                   <img src="https://static.wixstatic.com/media/9faaae_b2daee17da284263a70651ddfa00cfc0~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_b2daee17da284263a70651ddfa00cfc0~mv2.jpg">
                   <div class="title">Jérusalem</div>
               </ion-card>
@@ -294,13 +298,13 @@
     
           <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('jeunesse')">
                   <img src="https://static.wixstatic.com/media/5aeeaf91420c410b8b9504d587e95373.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/5aeeaf91420c410b8b9504d587e95373.jpg">
                   <div class="title">Jeunesse</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('integration')">
                   <img src="https://static.wixstatic.com/media/99cd433004024e4eb1ab4d6d04cba8ad.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/99cd433004024e4eb1ab4d6d04cba8ad.jpg">
                   <div class="title">Klita - Intégration</div>
               </ion-card>
@@ -311,13 +315,13 @@
     
           <ion-row>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('knesset')">
                   <img src="https://static.wixstatic.com/media/9faaae_0fcfa459197642a0bfc1678422050900~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_0fcfa459197642a0bfc1678422050900~mv2.jpg">
                   <div class="title">Knesset</div>
               </ion-card>
             </ion-col>
             <ion-col col-md-4>
-              <ion-card (click)="hideMe()">
+              <ion-card (click)="searchAndHide('lois')">
                   <img src="https://static.wixstatic.com/media/9faaae_c172c2982f3f403ea74dab34ecd07f9b~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_c172c2982f3f403ea74dab34ecd07f9b~mv2.jpg">
                   <div class="title">Lois</div>
               </ion-card>
@@ -328,13 +332,13 @@
 
           <ion-row>
               <ion-col col-md-4>
-                <ion-card (click)="hideMe()">
+                <ion-card (click)="searchAndHide('lycee')">
                     <img src="https://static.wixstatic.com/media/dbad64a44a18e3a2bd11cdc6506772e1.png/v1/fill/w_243,h_250,al_c,usm_0.66_1.00_0.01/dbad64a44a18e3a2bd11cdc6506772e1.png">
                     <div class="title">Lycée</div>
                 </ion-card>
               </ion-col>
               <ion-col col-md-4>
-                <ion-card (click)="hideMe()">
+                <ion-card (click)="searchAndHide('massa')">
                     <img src="https://static.wixstatic.com/media/4a5bfc_9efc2562f8e94afa82d6141fde16f0e1~mv2.png/v1/fill/w_243,h_250,al_c,lg_1/4a5bfc_9efc2562f8e94afa82d6141fde16f0e1~mv2.png">
                     <div class="title">Massa</div>
                 </ion-card>
@@ -345,13 +349,13 @@
 
             <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('medical')">
                       <img src="https://static.wixstatic.com/media/f2f697363ea78141cb664a2a9c91143f.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/f2f697363ea78141cb664a2a9c91143f.jpg">
                       <div class="title">Médical</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('ministere')">
                       <img src="https://static.wixstatic.com/media/9faaae_980ca8924d434939a1779b836ba33c80~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_980ca8924d434939a1779b836ba33c80~mv2.jpg">
                       <div class="title">Ministère</div>
                   </ion-card>
@@ -362,13 +366,13 @@
         
               <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('municipalite')">
                       <img src="https://static.wixstatic.com/media/9faaae_0c0f2b295a87466da2a881f845d1aeeb~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_0c0f2b295a87466da2a881f845d1aeeb~mv2.jpg">
                       <div class="title">Municipalité</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('netanya')">
                       <img src="https://static.wixstatic.com/media/9faaae_5942b7db8d1f4c7aaa43c224556a12b7~mv2_d_3072_2048_s_2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9faaae_5942b7db8d1f4c7aaa43c224556a12b7~mv2_d_3072_2048_s_2.jpg">
                       <div class="title">Netanya</div>
                   </ion-card>
@@ -379,13 +383,13 @@
         
               <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('raanana')">
                       <img src="https://static.wixstatic.com/media/4a5bfc_24318eb96bcc40da9af08f69493731bf~mv2.png/v1/fill/w_243,h_250,al_c,usm_0.66_1.00_0.01/4a5bfc_24318eb96bcc40da9af08f69493731bf~mv2.png">
                       <div class="title">Raanana</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('social')">
                       <img src="https://static.wixstatic.com/media/dd7ddf7498614d30948825990fa30b3a.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/dd7ddf7498614d30948825990fa30b3a.jpg">
                       <div class="title">Social</div>
                   </ion-card>
@@ -396,13 +400,13 @@
         
               <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('sport')">
                       <img src="https://static.wixstatic.com/media/9ceb7c1c54784099a19b438b1ddbf85e.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9ceb7c1c54784099a19b438b1ddbf85e.jpg">
                       <div class="title">Sport</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('tlv')">
                       <img src="https://static.wixstatic.com/media/4a5bfc_090f15436859447a860eddfc90789dfa~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/4a5bfc_090f15436859447a860eddfc90789dfa~mv2.jpg">
                       <div class="title">TLV</div>
                   </ion-card>
@@ -413,13 +417,13 @@
         
               <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('torah')">
                       <img src="https://static.wixstatic.com/media/4a5bfc_52a9512357314c57a7804bcbb81b60b3~mv2.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/4a5bfc_52a9512357314c57a7804bcbb81b60b3~mv2.jpg">
                       <div class="title">Torah</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('tourisme')">
                       <img src="https://static.wixstatic.com/media/90cf860d8e3548fdb4808f676ee3e05d.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/90cf860d8e3548fdb4808f676ee3e05d.jpg">
                       <div class="title">Tourisme</div>
                   </ion-card>
@@ -430,13 +434,13 @@
         
               <ion-row>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('tsahal')">
                       <img src="https://static.wixstatic.com/media/5d5e9e4c7527434685894b2ea174407b.jpeg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/5d5e9e4c7527434685894b2ea174407b.jpeg">
                       <div class="title">Tsahal</div>
                   </ion-card>
                 </ion-col>
                 <ion-col col-md-4>
-                  <ion-card (click)="hideMe()">
+                  <ion-card (click)="searchAndHide('vie pratique')">
                       <img src="https://static.wixstatic.com/media/9dc18799fdf342eca424a7d09277bd1c.jpg/v1/fill/w_243,h_250,al_c,q_80,usm_0.66_1.00_0.01/9dc18799fdf342eca424a7d09277bd1c.jpg">
                       <div class="title">Vie pratique</div>
                   </ion-card>
@@ -450,9 +454,9 @@
 
 
 
- <ion-content class="getstart">
-  <ion-list>
-    <button ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
+ <ion-content *ngIf="hide2" class="getstart">
+  <ion-list class="results">
+    <button class="results" ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
     <ion-thumbnail item-start>
       <img [src]="video?.snippet?.thumbnails?.default?.url">
     </ion-thumbnail>

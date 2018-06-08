@@ -16,10 +16,15 @@ export class SearchPage {
   videosResults: Observable<any[]>;
   
   constructor(public navCtrl: NavController, private plt: Platform, private youtube: YoutubeVideoPlayer, public navParams: NavParams, private ytProvider: YtProvider) { }
-  
+  flag:boolean = false;
   hide:boolean = true;
-  hideMe() {
+  hideSubjects() {
     this.hide = !this.hide;
+  }
+
+  hide2:boolean = false;
+  hideResults(){
+    this.hide2 = !this.hide2;
   }
   
   myVid="";
@@ -34,10 +39,26 @@ export class SearchPage {
   }
 
   searchVideos(inputName) {
-    let listId = this.navParams.get('id');
-    this.videosResults = this.ytProvider.getVideoFromChannel(this.channelId, inputName);
-    this.videosResults.subscribe(data=> {
-      console.log('video data: ', data);
-    })
+    if(inputName != null)
+    {
+      let listId = this.navParams.get('id');
+      this.videosResults = this.ytProvider.getVideoFromChannel(this.channelId, inputName);
+      this.videosResults.subscribe(data=> {
+        console.log('video data: ', data);
+      })
+      if(!this.flag)
+      {
+          this.hideSubjects();
+          this.hideResults();
+      }
+    }
+   }
+
+   searchAndHide(input){
+    this.flag = true;
+    console.log("in searchandhide");
+    this.searchVideos(input);
+    this.hideSubjects();
+    this.hideResults();
    }
 }
