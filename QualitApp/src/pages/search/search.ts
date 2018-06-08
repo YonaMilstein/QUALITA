@@ -56,7 +56,6 @@ export class SearchPage {
 
    searchAndHide(input){
     this.flag = true;
-    console.log("in searchandhide");
     this.searchVideos(input);
     this.hideSubjects();
     this.hideResults();
