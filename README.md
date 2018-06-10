@@ -6,7 +6,7 @@ Jewish immigrants choose to come to Israel out of personal choice and understand
 It is our collective duty as a Jewish state to do whatever it takes to help accommodate those immigrants here in Israel.
 <br></br>
 
-## Please visit our [live application](https://amiex2-df91c.firebaseapp.com)
+## Please visit our [live application](https://qualitapp-2e011.firebaseapp.com)
 <br></br>
 
 ## Tools & Practices
