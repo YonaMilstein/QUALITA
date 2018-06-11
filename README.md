@@ -2,8 +2,7 @@
 
 ## Our vision
 <img align="right" src="http://qualita.org.il/wp-content/uploads/2017/01/Home-page-Qualita_02.jpg"/>
-Jewish immigrants choose to come to Israel out of personal choice and understanding that this is an important and crucial decision that will affect their future and the future of their families. 
-It is our collective duty as a Jewish state to do whatever it takes to help accommodate those immigrants here in Israel.
+Qualita application is a very important product. There are lots of french immigrants who need the support, help, and courage that QUALIA STUDIO provides them. Unffortunatly, the youtube channel and wix page of QUALIA STUDIO are not very accesable and not everyone has a computer. Providing an easy to use application, that will sit on every personal smart phone will help the new immigrants get an easy access to all of the information, videos, and help them with a soft integration in israel.
 <br></br>
 
 ## Please visit our [live application](https://qualitapp-2e011.firebaseapp.com)
