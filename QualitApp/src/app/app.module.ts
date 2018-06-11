@@ -21,6 +21,7 @@ import { VideoPage } from '../pages/video/video';
 import { SafePipe } from './pipes/safe';
 
 import { VodAudioPage } from '../pages/vod-audio/vod-audio';
+import { DirectAudioPage } from '../pages/direct-audio/direct-audio';
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +35,8 @@ import { VodAudioPage } from '../pages/vod-audio/vod-audio';
     DirectVideoPage,
     TabsPage,
     SafePipe,
-    VodAudioPage
+    VodAudioPage,
+    DirectAudioPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { VodAudioPage } from '../pages/vod-audio/vod-audio';
     ParticipatePage,
     DirectVideoPage,
     TabsPage,
-    VodAudioPage
+    VodAudioPage,
+    DirectAudioPage
   ],
   providers: [
     YtProvider,
