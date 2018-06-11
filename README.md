@@ -9,10 +9,6 @@ It is our collective duty as a Jewish state to do whatever it takes to help acco
 ## Please visit our [live application](https://qualitapp-2e011.firebaseapp.com)
 <br></br>
 
-## Tools & Practices
-We're trying to use the best tools and practices in order to produce a quality enginneered product.
-(replace 'jce-il/project-template' with your 'username/repo' and register to the relevant services)
-
 |Category|Status|
 |---|---|
 | Version Control System|[Git](https://git-scm.com/) & [GitHub](https://github.com/)|
@@ -28,8 +24,6 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Issues | [![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/YonaMilstein/QUALITA/issues) |
 | Project Management Board| [here](https://github.com/jce-il/project-template/projects/1) |
 | Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/jce-il/project-template/graphs/contributors)|
-| Deployment | [![Heroku](http://heroku-badge.herokuapp.com/?app=my-app&style=flat&svg=1&root=index.html)]() |
-| Security | [![Known Vulnerabilities](https://snyk.io/test/github/jce-il/project-template/badge.svg)](https://snyk.io/test/github/jce-il/project-template) |
 | Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/YonaMilstein/QUALITA/wiki) |
 | Project Course Status | ... |
 
