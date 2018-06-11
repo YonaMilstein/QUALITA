@@ -17,7 +17,7 @@ It is our collective duty as a Jewish state to do whatever it takes to help acco
 | License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) |
 | Issues | [![GitHub issues](https://github.com/YonaMilstein/QUALITA/issues)](https://github.com/YonaMilstein/QUALITA/issues) |
 | Project Management Board| [here](https://github.com/YonaMilstein/QUALITA/projects/1) |
-| Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)]
+| Documentation | [![Inline docs](https://github.com/YonaMilstein/QUALITA/wiki)]
 
 
 ## Helpful links:
