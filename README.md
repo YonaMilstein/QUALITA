@@ -14,18 +14,10 @@ It is our collective duty as a Jewish state to do whatever it takes to help acco
 | Version Control System|[Git](https://git-scm.com/) & [GitHub](https://github.com/)|
 | Recommended IDE | [VSCode](https://code.visualstudio.com) |
 | Group Chat | [![](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/QUALITA-gitter/Lobby) |
-| Build Status (CI) |  [![Build Status](https://travis-ci.org/jce-il/project-template.svg?branch=master)](https://travis-ci.org/jce-il/project-template) |
-| Dependencies | [![David](https://img.shields.io/david/dev/idleberg/vscode-badges.svg?style=flat-square)](https://david-dm.org/jce-il/project-template?type=dev) |
 | License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) |
-| Test Coverege | [![codecov.io](https://codecov.io/github/jce-il/project-template/coverage.svg?branch=master)](https://codecov.io/github/jce-il/project-template?branch=master) |
-| Code Quality | [![Code Climate](https://codeclimate.com/github/jce-il/project-template.svg)](https://codeclimate.com/github/jce-il/project-template) |
-| Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/YonaMilstein/QUALITA/wiki/Inception#coding-conventions) |
-| Current Release | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/jce-il/project-template/releases) |
 | Issues | [![GitHub issues](https://github.com/YonaMilstein/QUALITA/issues)](https://github.com/YonaMilstein/QUALITA/issues) |
 | Project Management Board| [here](https://github.com/YonaMilstein/QUALITA/projects/1) |
-| Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/jce-il/project-template/graphs/contributors)|
-| Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/YonaMilstein/QUALITA/wiki) |
-| Project Course Status | ... |
+| Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)]
 
 
 ## Helpful links:
