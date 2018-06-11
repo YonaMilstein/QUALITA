@@ -1,6 +1,8 @@
 <h1 align="center">QUALITA</h1>
 
 ## Our vision
+
+[![Join the chat at https://gitter.im/QUALITA-gitter/Lobby](https://badges.gitter.im/QUALITA-gitter/Lobby.svg)](https://gitter.im/QUALITA-gitter/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <img align="right" src="http://qualita.org.il/wp-content/uploads/2017/01/Home-page-Qualita_02.jpg"/>
 Qualita application is a very important product. There are lots of french immigrants who need the support, help, and courage that QUALIA STUDIO provides them. Unffortunatly, the youtube channel and wix page of QUALIA STUDIO are not very accesable and not everyone has a computer. Providing an easy to use application, that will sit on every personal smart phone will help the new immigrants get an easy access to all of the information, videos, and help them with a soft integration in israel.
 <br></br>
