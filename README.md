@@ -22,7 +22,7 @@ It is our collective duty as a Jewish state to do whatever it takes to help acco
 | Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/YonaMilstein/QUALITA/wiki/Inception#coding-conventions) |
 | Current Release | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/jce-il/project-template/releases) |
 | Issues | [![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/YonaMilstein/QUALITA/issues) |
-| Project Management Board| [here](https://github.com/jce-il/project-template/projects/1) |
+| Project Management Board| [here](https://github.com/YonaMilstein/QUALITA/projects/1) |
 | Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/jce-il/project-template/graphs/contributors)|
 | Documentation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/YonaMilstein/QUALITA/wiki) |
 | Project Course Status | ... |
