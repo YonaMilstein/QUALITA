@@ -48,6 +48,7 @@ export class SearchPage {
       })
       if(!this.flag)
       {
+          this.flag = true;
           this.hideSubjects();
           this.hideResults();
       }
