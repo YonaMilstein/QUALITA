@@ -1,8 +1,9 @@
 page-vod-video{
 
     .content {
-        background: url("../../assets/imgs/background.jpg");
-        background-size: 130%;
+        background: url("../assets/imgs/background.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
     }
 
     .list{
