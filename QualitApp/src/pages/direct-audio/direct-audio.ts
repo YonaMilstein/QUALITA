@@ -34,4 +34,8 @@ export class DirectAudioPage {
     console.log('ionViewDidLoad DirectAudioPage');
   }
 
+  ionViewDidLeave()
+  {
+    this.pause();
+  }
 }
