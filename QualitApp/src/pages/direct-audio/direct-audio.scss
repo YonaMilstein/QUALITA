@@ -1,12 +1,13 @@
 page-direct-audio {
     .content {
-        background: url("../../assets/imgs/background.jpg");
-        background-size: 130%;
+        background: url("../assets/imgs/background.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
     }
     .DirectAudio{
         background-color: transparent;
     }
- body{
-    background-color: transparent;
- }
+//  body{
+//     background-color: transparent;
+//  }
 }
