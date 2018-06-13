@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>direct-audio</ion-title>
+    <ion-title>radio qualita</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,6 +15,9 @@
 
 <ion-content class="content">
  
-    <iframe class="DirectAudio" width="100%" height="80px"  allowtransparency="true" src="http://radio.ilcast.com:8064//;stream.mp3" frameborder="0" allowfullscreen></iframe>
+    <!-- <iframe class="DirectAudio" width="100%" height="80px"  allowtransparency="true" src="http://radio.ilcast.com:8064//;stream.mp3" frameborder="0" allowfullscreen></iframe> -->
   
+    <button ion-button dark (click)="play()"> <ion-icon name="play"></ion-icon></button>
+    <button ion-button dark (click)="pause()"> <ion-icon name="pause"></ion-icon></button>
+
 </ion-content>

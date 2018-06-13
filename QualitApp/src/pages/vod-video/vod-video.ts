@@ -15,7 +15,9 @@ export class VodVideoPage {
      channelId = 'UC4ZNntU3CyEIH8RGH0n_5bw';
      playlists: Observable<any[]>;
 
-     constructor(public navCtrl: NavController, private ytProvider: YtProvider, private alertCtrl: AlertController) { }
+     constructor(public navCtrl: NavController, private ytProvider: YtProvider, private alertCtrl: AlertController) {
+      this.searchPlaylists();
+      }
  
      searchPlaylists() {
        this.playlists = this.ytProvider.getPlaylistsForChannel(this.channelId);
@@ -36,7 +38,7 @@ export class VodVideoPage {
      }
      
      //equivalent to onload fun
-     ionViewDidLoad() { 
-      this.searchPlaylists();
-    }
+    //  ionViewDidLoad() { 
+    //   this.searchPlaylists();
+    // }
    }
