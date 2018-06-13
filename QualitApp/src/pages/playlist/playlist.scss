@@ -1,3 +1,14 @@
 page-playlist {
+    .content {
+        //background-color: chartreuse;
+        //background: url("../../assets/imgs/background.jpg");
+        background: url("../assets/imgs/background.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+       // background-size: 100%;
+    }
 
+    .list{
+       background-color: transparent;
+    }
 }

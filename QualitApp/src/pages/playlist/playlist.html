@@ -4,9 +4,9 @@
     </ion-navbar>
   </ion-header>
    
-  <ion-content>
+  <ion-content class="content">
     <ion-list>
-      <button ion-item *ngFor="let video of videos | async" (click)="openVideo(video)" detail-none>
+      <button class="list" ion-item *ngFor="let video of videos | async" (click)="openVideo(video)" detail-none>
         <ion-thumbnail item-start>
         <img [src]="video?.snippet?.thumbnails?.standard?.url">
       </ion-thumbnail>
