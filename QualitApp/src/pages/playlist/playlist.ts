@@ -36,4 +36,7 @@ export class PlaylistPage {
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
 
   }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad PlaylistPage');
+  }
 } 
