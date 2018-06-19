@@ -38,7 +38,11 @@ export class VideoPage {
     console.log('ionViewDidLoad VideoPage');
   }
 
-  ionViewWillLeave(){
-    this.navCtrl.popToRoot();
+  ionViewDidLeave(){
+   //let index= this.navCtrl.length;
+   const myActualController = this.navCtrl.getActive();
+   const pageIndex: number = this.navCtrl.indexOf(myActualController);
+   this.navCtrl.remove(pageIndex);
+    console.log("bitch");
   }
 }
