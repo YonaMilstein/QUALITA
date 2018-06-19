@@ -12,17 +12,30 @@ import { VideoPage } from '../video/video';
   templateUrl: 'playlist.html',
 })
 export class PlaylistPage {
-  videos: Observable<any[]>;
+  videos: any[];
  
   constructor(public navCtrl: NavController, private plt: Platform, private youtube: YoutubeVideoPlayer, public navParams: NavParams, private ytProvider: YtProvider) {
-    let listId = this.navParams.get('id');
-    this.videos = this.ytProvider.getListVideos(listId);
-    this.videos.subscribe(data=> {
-      console.log('video data: ', data);
-    })
-   
+    this.getVideos();
   }
- myVid="";
+
+  async getVideos(){
+    let listId = this.navParams.get('id');
+    var res = await this.ytProvider.getListVideos(listId, null);
+    this.videos = res['item'];
+    var token = res['token'];
+
+
+    while(token != undefined)
+    {
+      res = await this.ytProvider.getListVideos(listId, token);
+      this.videos=this.videos.concat(res['item']);
+      token = res['token'];
+
+    }
+  }
+
+
+  myVid="";
   openVideo(video) {
  
     // if (this.plt.is('cordova')) {
@@ -32,7 +45,6 @@ export class PlaylistPage {
     // }
 
     this.myVid='https://www.youtube.com/embed/'+video.snippet.resourceId.videoId;
-    console.log('video data: ', this.myVid); //test
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
 
   }

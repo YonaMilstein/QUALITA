@@ -13,7 +13,7 @@ import { VideoPage } from '../video/video';
 export class SearchPage {
 
   channelId = 'UC4ZNntU3CyEIH8RGH0n_5bw';
-  videosResults: Observable<any[]>;
+  videosResults: any[];
   
   constructor(public navCtrl: NavController, private plt: Platform, private youtube: YoutubeVideoPlayer, public navParams: NavParams, private ytProvider: YtProvider) { }
   flag:boolean = false;
@@ -30,7 +30,6 @@ export class SearchPage {
   myVid="";
   openVideo(video) {
     this.myVid='https://www.youtube.com/embed/'+video.id.videoId;
-    console.log('video data: ', this.myVid); //test
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
   }
 
@@ -38,14 +37,21 @@ export class SearchPage {
     this.navCtrl.setRoot(SearchPage);
   }
 
-  searchVideos(inputName) {
+  async searchVideos(inputName) {
     if(inputName != null)
     {
       let listId = this.navParams.get('id');
-      this.videosResults = this.ytProvider.getVideoFromChannel(this.channelId, inputName);
-      this.videosResults.subscribe(data=> {
-        console.log('video data: ', data);
-      })
+      var res = await this.ytProvider.getVideoFromChannel(this.channelId, inputName, null);
+      this.videosResults = res['item'];
+      var token = res['token'];
+
+      while(token != undefined)
+      {
+        res = await this.ytProvider.getVideoFromChannel(this.channelId, inputName, token);
+        this.videosResults=this.videosResults.concat(res['item']);
+        token = res['token'];
+      }
+      
       if(!this.flag)
       {
           this.flag = true;

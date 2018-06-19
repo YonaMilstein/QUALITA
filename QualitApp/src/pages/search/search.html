@@ -456,7 +456,7 @@
 
  <ion-content *ngIf="hide2" class="getstart">
   <ion-list class="results">
-    <button class="results" ion-item *ngFor="let video of videosResults | async" (click)="openVideo(video)" detail-none>
+    <button class="results" ion-item *ngFor="let video of videosResults" (click)="openVideo(video)" detail-none>
     <ion-thumbnail item-start>
       <img [src]="video?.snippet?.thumbnails?.default?.url">
     </ion-thumbnail>
