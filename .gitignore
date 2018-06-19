@@ -76,6 +76,3 @@ modules/views/
 # vim Files
 # --------------------
 *.swp
-QualitApp/config.xml
-QualitApp/package.json
-QualitApp/package-lock.json
