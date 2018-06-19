@@ -18,13 +18,25 @@ export class ParticipatePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
    //this.reload();
   }
-reload(){
-  this.navCtrl.setRoot(ParticipatePage);
-}
+// reload(){
+//   this.navCtrl.push(ParticipatePage);
+// }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipatePage');
   }
 ionViewWillLeave(){
-  //this.navCtrl.pop();
+  console.log("left participate");
+  this.navCtrl.insert(1, ParticipatePage);
+this.navCtrl.pop();
+ // this.navCtrl.popToRoot();
+  //this.navCtrl.goToRoot(this.navCtrl);
+ 
 }
+ionViewDidEnter() {
+  console.log("entered participate");
+  //this.loadGetService();
+}
+// ionViewDidEnter(){
+//   this.navCtrl.getActive();
+// }
 }
