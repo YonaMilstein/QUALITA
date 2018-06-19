@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import {SafePipe} from '../../app/pipes/safe';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 
 /**
@@ -34,7 +34,12 @@ export class VideoPage {
   ionViewDidLeave(){
    const myActualController = this.navCtrl.getActive();
    const pageIndex: number = this.navCtrl.indexOf(myActualController);
-   this.navCtrl.remove(pageIndex);
-  console.log("bitch");
+  if(pageIndex<=1){
+    this.navCtrl.popToRoot();
+  }
+  else{
+    this.navCtrl.remove(pageIndex);
+  }
+  
   }
 }
