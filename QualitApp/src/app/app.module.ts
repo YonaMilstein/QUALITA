@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
 import { DirectPage } from '../pages/direct/direct';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -19,9 +18,9 @@ import { VodVideoPage } from '../pages/vod-video/vod-video';
 import { DirectVideoPage } from '../pages/direct-video/direct-video';
 import { VideoPage } from '../pages/video/video';
 import { SafePipe } from './pipes/safe';
-
 import { VodAudioPage } from '../pages/vod-audio/vod-audio';
 import { DirectAudioPage } from '../pages/direct-audio/direct-audio';
+
 @NgModule({
   declarations: [
     MyApp,

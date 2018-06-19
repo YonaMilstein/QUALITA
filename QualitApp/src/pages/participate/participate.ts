@@ -16,11 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ParticipatePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-   //this.reload();
   }
-// reload(){
-//   this.navCtrl.push(ParticipatePage);
-// }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipatePage');
   }
@@ -28,16 +24,10 @@ ionViewWillLeave(){
   console.log("left participate");
 
   this.navCtrl.insert(1, ParticipatePage);
-this.navCtrl.pop();
- // this.navCtrl.popToRoot();
-  //this.navCtrl.goToRoot(this.navCtrl);
+  this.navCtrl.pop();
  
 }
 ionViewDidEnter() {
   console.log("entered participate");
-  //this.loadGetService();
 }
-// ionViewDidEnter(){
-//   this.navCtrl.getActive();
-// }
 }

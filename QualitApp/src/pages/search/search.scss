@@ -10,8 +10,13 @@ page-search{
 
     #buttons{
         background: url("../assets/imgs/background.jpg");
-        display: flex;
-        justify-content: space-between;
+    }
+
+    #button1{
+        width: 48%
+    }
+    #button2{
+        width: 48%
     }
 
     ion-header{

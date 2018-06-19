@@ -30,7 +30,6 @@ export class SearchPage {
   myVid="";
   openVideo(video) {
     this.myVid='https://www.youtube.com/embed/'+video.id.videoId;
-    console.log('video data: ', this.myVid); //test
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
   }
 

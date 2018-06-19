@@ -17,20 +17,13 @@ import {SafePipe} from '../../app/pipes/safe';
  
 })
 export class VideoPage {
- // vid="https://www.youtube.com/embed/L7S_a0EbODU";//test
   public x: string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private dom: DomSanitizer) {
     var myVid = this.navParams.get('myVid');
-    console.log('video data: ', myVid); //test
     this.x=myVid;
-    console.log('video data:test x ', this.x); //test
-    //x= this.sanitize(myVid);
-   // var x= "https://www.youtube.com/embed/L7S_a0EbODU";
   }
  
   sanitize(Vid){
-    console.log('sanitizer vid: ', Vid); //test
-   // console.log('sanitizer: ',this.dom.bypassSecurityTrustResourceUrl(Vid)); //test
      return this.dom.bypassSecurityTrustResourceUrl(Vid);
   }
 
@@ -39,10 +32,9 @@ export class VideoPage {
   }
 
   ionViewDidLeave(){
-   //let index= this.navCtrl.length;
    const myActualController = this.navCtrl.getActive();
    const pageIndex: number = this.navCtrl.indexOf(myActualController);
    this.navCtrl.remove(pageIndex);
-    console.log("bitch");
+  console.log("bitch");
   }
 }
