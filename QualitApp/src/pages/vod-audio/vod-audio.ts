@@ -20,7 +20,12 @@ export class VodAudioPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VodAudioPage');
+    
   }
-
+ionViewDidLeave(){
+  this.navCtrl.pop();
+}
+  ionViewDidEnter() {
+    //this.navCtrl.setRoot(VodAudioPage);
+  }
 }

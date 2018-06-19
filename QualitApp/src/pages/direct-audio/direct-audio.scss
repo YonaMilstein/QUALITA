@@ -1,12 +1,23 @@
 page-direct-audio {
     .content {
-        background: url("../../assets/imgs/background.jpg");
-        background-size: 130%;
+        background: url("../assets/imgs/direct.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center top;
     }
     .DirectAudio{
         background-color: transparent;
     }
- body{
-    background-color: transparent;
- }
+    .audioButtons{
+        text-align: center;
+        margin: auto;
+        width: 60%;
+        padding-top: 86%;
+        //  display: flex;
+        // justify-conten: center;
+        // align-items: center;
+    }
+    .dividerspan{
+        display:inline-block;
+    }
 }
