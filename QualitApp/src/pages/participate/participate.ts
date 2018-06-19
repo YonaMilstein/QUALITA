@@ -23,8 +23,8 @@ export class ParticipatePage {
 ionViewWillLeave(){
   console.log("left participate");
 
-  this.navCtrl.insert(1, ParticipatePage);
-  this.navCtrl.pop();
+  //this.navCtrl.insert(1, ParticipatePage);
+  ///this.navCtrl.pop();
  
 }
 ionViewDidEnter() {
