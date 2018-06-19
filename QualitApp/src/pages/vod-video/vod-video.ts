@@ -36,9 +36,4 @@ export class VodVideoPage {
      openPlaylist(id) {
        this.navCtrl.push(PlaylistPage, {id: id});
      }
-     
-     //equivalent to onload fun
-    //  ionViewDidLoad() { 
-    //   this.searchPlaylists();
-    // }
    }

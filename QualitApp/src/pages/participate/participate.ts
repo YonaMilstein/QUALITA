@@ -16,15 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ParticipatePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-   //this.reload();
   }
-reload(){
-  this.navCtrl.setRoot(ParticipatePage);
-}
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipatePage');
   }
 ionViewWillLeave(){
-  //this.navCtrl.pop();
+  console.log("left participate");
+
+  //this.navCtrl.insert(1, ParticipatePage);
+  ///this.navCtrl.pop();
+ 
+}
+ionViewDidEnter() {
+  console.log("entered participate");
 }
 }

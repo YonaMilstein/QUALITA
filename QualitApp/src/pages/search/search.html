@@ -11,10 +11,10 @@
 
   <div id="buttons">
   <span>
-      <button round ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
+      <button id="button1" round ion-button (click)="searchVideos(inputName)" [disabled]="channelId === ''" color="danger">Rechercher</button>
     </span>
     <span>
-      <button round ion-button (click)="reload()" [disabled]="channelId === ''" color="danger">Thèmes</button>
+      <button id="button2" round ion-button (click)="reload()" [disabled]="channelId === ''" color="danger">Thèmes</button>
     </span>
   </div>
 

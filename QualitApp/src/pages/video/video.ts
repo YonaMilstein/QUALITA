@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import {SafePipe} from '../../app/pipes/safe';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 
 /**
@@ -17,20 +17,13 @@ import {SafePipe} from '../../app/pipes/safe';
  
 })
 export class VideoPage {
- // vid="https://www.youtube.com/embed/L7S_a0EbODU";//test
   public x: string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private dom: DomSanitizer) {
     var myVid = this.navParams.get('myVid');
-    console.log('video data: ', myVid); //test
     this.x=myVid;
-    console.log('video data:test x ', this.x); //test
-    //x= this.sanitize(myVid);
-   // var x= "https://www.youtube.com/embed/L7S_a0EbODU";
   }
  
   sanitize(Vid){
-    console.log('sanitizer vid: ', Vid); //test
-   // console.log('sanitizer: ',this.dom.bypassSecurityTrustResourceUrl(Vid)); //test
      return this.dom.bypassSecurityTrustResourceUrl(Vid);
   }
 
@@ -38,7 +31,15 @@ export class VideoPage {
     console.log('ionViewDidLoad VideoPage');
   }
 
-  ionViewWillLeave(){
+  ionViewDidLeave(){
+   const myActualController = this.navCtrl.getActive();
+   const pageIndex: number = this.navCtrl.indexOf(myActualController);
+  if(pageIndex<=1){
     this.navCtrl.popToRoot();
+  }
+  else{
+    this.navCtrl.remove(pageIndex);
+  }
+  
   }
 }

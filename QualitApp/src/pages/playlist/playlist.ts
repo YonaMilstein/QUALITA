@@ -37,13 +37,6 @@ export class PlaylistPage {
 
   myVid="";
   openVideo(video) {
- 
-    // if (this.plt.is('cordova')) {
-    //   this.youtube.openVideo(video.snippet.resourceId.videoId);
-    // } else {
-    //   window.open('https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId);
-    // }
-
     this.myVid='https://www.youtube.com/embed/'+video.snippet.resourceId.videoId;
     this.navCtrl.push(VideoPage, {myVid: this.myVid});
 
