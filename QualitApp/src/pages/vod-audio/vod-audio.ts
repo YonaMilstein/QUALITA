@@ -19,7 +19,4 @@ export class VodAudioPage {
     this.myUrl="https://www.studioqualita.com/podcasts";
   }
 
-  ionViewDidLeave(){
-    this.navCtrl.pop();
-  }
 }
