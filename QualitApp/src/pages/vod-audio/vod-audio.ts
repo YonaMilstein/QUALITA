@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VodPage } from '../vod/vod';
 
 /**
  * Generated class for the VodAudioPage page.
@@ -30,7 +31,7 @@ export class VodAudioPage {
 
   ionViewDidEnter() {
     if (!this.exist)
-      this.navCtrl.setRoot(VodAudioPage);
+      this.navCtrl.setRoot(VodPage);
 
   }
 
