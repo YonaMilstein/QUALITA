@@ -15,19 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ParticipatePage {
 
+  exist = false
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   ionViewDidLoad() {
+    this.exist = true
     console.log('ionViewDidLoad ParticipatePage');
   }
-ionViewWillLeave(){
-  console.log("left participate");
+  ionViewWillLeave() {
+    this.exist = false
+    console.log("left participate");
 
-  //this.navCtrl.insert(1, ParticipatePage);
-  ///this.navCtrl.pop();
- 
-}
-ionViewDidEnter() {
-  console.log("entered participate");
-}
+    //this.navCtrl.insert(1, ParticipatePage);
+    ///this.navCtrl.pop();
+
+  }
+  ionViewDidEnter() {
+    console.log("entered participate");
+    if (!this.exist)
+      this.navCtrl.setRoot(ParticipatePage);
+
+  }
 }
