@@ -10,7 +10,7 @@
     <ion-list no-padding>
       <button class="list" ion-item *ngFor="let list of playlists | async" (click)="openPlaylist(list.id)">
         <ion-thumbnail item-start>
-        <img [src]="list.snippet.thumbnails.standard.url">
+        <img [src]="list.snippet.thumbnails.default.url">
       </ion-thumbnail>
       <h2>{{ list.snippet.title }}</h2>
       <p>{{ list.snippet.publishedAt | date:'short' }}</p>
