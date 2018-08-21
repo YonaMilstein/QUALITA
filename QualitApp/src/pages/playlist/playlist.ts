@@ -18,10 +18,14 @@ export class PlaylistPage {
     this.getVideos();
   }
 
+  rem(element, index, array){
+    return (element.snippet.thumbnails !== undefined); //retirer video privee
+  }
+
   async getVideos(){
     let listId = this.navParams.get('id');
     var res = await this.ytProvider.getListVideos(listId, null);
-    this.videos = res['item'];
+    this.videos = res['item'].filter(this.rem);
     var token = res['token'];
 
 

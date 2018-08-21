@@ -8,7 +8,7 @@
     <ion-list>
       <button class="list" ion-item *ngFor="let video of videos" (click)="openVideo(video)" detail-none>
         <ion-thumbnail item-start>
-        <img [src]="video?.snippet?.thumbnails?.standard?.url">
+        <img [src]="video?.snippet?.thumbnails?.default?.url">
       </ion-thumbnail>
       <h2>{{ video.snippet.title }}</h2> 
       <p>{{ video.snippet.description }}</p>
